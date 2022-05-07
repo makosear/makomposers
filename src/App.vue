@@ -1,26 +1,68 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="composer">
+
+    <div class="inputcomment">
+
+        <textbox />
+
+    </div>
+    <div class="selectchar">
+
+      <char />
+
+    </div>
+
+  </div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import char from './components/charSelection.vue'
+
+import textbox from './components/textbox.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: { char, textbox },
+  data(){
+    return {
+      title: 'Hi'
+    }
+  },
 }
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+div {
+  height: 100vh;
+}
+
+.composer{
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  height: 200%;
+}
+
+.selectchar{
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+}
+
+.inputcomment{
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  width: 50%;
+  min-width: 370px;
 }
 </style>
