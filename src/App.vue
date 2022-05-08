@@ -46,7 +46,7 @@ div {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   flex-direction: row;
-  height: 200%;
+  height: 100%;
 }
 
 .selectchar{

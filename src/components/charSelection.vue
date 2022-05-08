@@ -28,12 +28,12 @@ export default {
     }
   },
   mounted() {
-      fetch('http://localhost:3000/drnames')
+      fetch('https://gist.githubusercontent.com/makosear/b275d1fb456350f578f3b9b84457f20e/raw/63435966112098d04bcbf586b95770dfd15e7450/drnames.json')
         .then(res => res.json())
         .then(data => this.drnames = data)
         .catch (err => console.log(err.message))
     
-      fetch('http://localhost:3000/busts')
+      fetch('https://gist.githubusercontent.com/makosear/ecf84668a916605a4e5fa97c7682fe74/raw/571399a433f0f97bb952207a60c11eae36431520/busts.json')
         .then(res2 => res2.json())
         .then(data => this.images = data)
         .catch (err => console.log(err.message))
